@@ -1,2 +1,2 @@
 # hass-nut
-Integration of NUT in HAss
+Integration of NUT in Home Assistant
