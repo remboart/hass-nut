@@ -1,0 +1,31 @@
+###### Groups ########
+UPS:
+  name: UPS
+  icon: mdi:battery
+  view: true
+  entities:
+#  - group.UPS1
+  - group.UPS2
+#UPS1:
+UPS2:
+  name: APCSmartUPSXL
+  view: false
+  entities:
+  - sensor.smartups_status_data
+  - sensor.smartups_battery_runtime
+  - sensor.smartups_battery_charge
+  - sensor.smartups_battery_voltage
+  - sensor.smartups_input_voltage
+  - sensor.smartups_battery_temperature
+  - sensor.smartups_beeper_status
+  - script.beeper_disable
+  - script.beeper_enable
+  - sensor.smartups_manufacturer
+  - sensor.smartups_model
+  - sensor.smartups_serial_number
+  - sensor.smartups_selftest_result
+  - script.initiate_selftest_quick
+  - script.initiate_selftest_deep
+  - script.initiate_selftest_stop
+  - script.initiate_paneltest_start
+  - script.initiate_paneltest_stop

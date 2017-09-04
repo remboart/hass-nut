@@ -1,0 +1,55 @@
+###### Customize ########
+  sensor.smartups_status_data:
+    friendly_name: 'UPS Status'
+    icon: mdi:battery-unknown
+  sensor.smartups_battery_voltage:
+    friendly_name: 'Batterij Voltage'
+    icon: mdi:car-battery
+  sensor.smartups_beeper_status:
+    friendly_name: 'Beeper Status'
+    icon: mdi:volume-low
+  sensor.smartups_battery_runtime:
+    friendly_name: 'Batterij Doorlooptijd'
+    icon: mdi:timer
+  sensor.smartups_manufacturer:
+    friendly_name: 'Producent'
+    icon: mdi:information-outline
+  sensor.smartups_model:
+    friendly_name: 'Model'
+    icon: mdi:information-outline
+  sensor.smartups_serial_number:
+    friendly_name: 'Serienummer'
+    icon: mdi:information-outline
+  sensor.smartups_battery_charge:
+    friendly_name: 'Batterij Lading'
+    icon: mdi:battery-charging
+  sensor.smartups_input_voltage:
+    friendly_name: 'Ingang Voltage'
+    icon: mdi:power-plug
+  sensor.smartups_selftest_result:
+    friendly_name: 'Zelf Test'
+    icon: mdi:checkbox-marked
+  sensor.smartups_battery_temperature:
+    friendly_name: 'Inverter Temperatuur'
+    icon: mdi:thermometer
+  script.beeper_disable:
+    friendly_name: 'Beeper Uitschakelen'
+    icon: mdi:volume-mute
+  script.beeper_enable:
+    friendly_name: 'Beeper Inschakelen'
+    icon: mdi:volume-high
+  script.initiate_selftest_quick:
+    friendly_name: 'Start Snelle Batterij Test'
+    icon: mdi:play
+  script.initiate_selftest_deep:
+    friendly_name: 'Start Diepe Batterij Test'
+    icon: mdi:skip-forward
+  script.initiate_selftest_stop:
+    friendly_name: 'Stop Batterij Test'
+    icon: mdi:stop
+  script.initiate_paneltest_start:
+    friendly_name: 'Start Paneel Test'
+    icon: mdi:play
+  script.initiate_paneltest_stop:
+    friendly_name: 'Stop Paneel Test'
+    icon: mdi:stop

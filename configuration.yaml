@@ -1,0 +1,42 @@
+###### Configuration ########
+homeassistant:
+  name: remboart
+  latitude: !secret homeassistant_lat
+  longitude: !secret homeassistant_long
+  elevation: -2
+  unit_system: metric
+  time_zone: Europe/Amsterdam
+  customize: !include customize.yaml
+#
+group: !include groups.yaml
+zone: !include zones.yaml
+script: !include scripts.yaml
+sensor: !include sensor.yaml
+automation: !include automations.yaml
+# Enables the frontend
+frontend:
+# Enables configuration UI
+config:
+http:
+  api_password: !secret http_password
+  # Uncomment this if you are using SSL or running in Docker etc
+  # base_url: example.duckdns.org:8123
+updater:
+  name: updater
+discovery:
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+history:
+logbook:
+sun:
+  name: sun
+###### APC SmartUPS ########
+shell_command:
+  beeper_disable: upscmd -u admin -p pass smartups@192.168.i.p beeper.disable
+  beeper_enable: upscmd -u admin -p pass smartups@192.168.i.p beeper.enable
+  initiate_selftest_quick: upscmd -u admin -p pass smartups@192.168.i.p test.battery.start.quick
+  initiate_selftest_deep: upscmd -u admin -p pass smartups@192.168.i.p test.battery.start.deep
+  initiate_selftest_stop: upscmd -u admin -p pass smartups@192.168.i.p test.battery.stop
+  initiate_paneltest_start: upscmd -u admin -p pass smartups@192.168.i.p test.panel.start
+  initiate_paneltest_stop: upscmd -u admin -p pass smartups@192.168.i.p test.panel.stop
+

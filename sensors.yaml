@@ -1,0 +1,22 @@
+###### Sensor #########
+- platform: nut
+  name: smartups
+  host: 192.168.i.p
+  port: 3493
+  alias: smartups
+  username: admin
+  password: pass
+  resources:
+    - ups.status
+    - battery.charge
+    - battery.runtime
+    - battery.voltage
+    - ups.mfr
+    - ups.model
+    - ups.serial
+    - input.voltage
+    - ups.beeper.status
+    - ups.test.result
+    - battery.temperature
+#- platform: nut   # Repeat for next NUT-UPS...
+#  name: smartups2 # etc.

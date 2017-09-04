@@ -1,0 +1,29 @@
+###### Scripts #########
+  beeper_enable:
+    alias: "shell_command.beeper_enable"
+    sequence:
+      - service: shell_command.beeper_enable
+  beeper_disable:
+    alias: "shell_command.beeper_disable"
+    sequence:
+      - service: shell_command.beeper_disable
+  initiate_selftest_quick:
+    alias: "shell_command.initiate_selftest_quick"
+    sequence:
+      - service: shell_command.initiate_selftest_quick
+  initiate_selftest_deep:
+    alias: "shell_command.initiate_selftest_deep"
+    sequence:
+      - service: shell_command.initiate_selftest_deep
+  initiate_selftest_stop:
+    alias: "shell_command.initiate_selftest_stop"
+    sequence:
+      - service: shell_command.initiate_selftest_stop
+  initiate_paneltest_start:
+    alias: "shell_command.initiate_paneltest_start"
+    sequence:
+      - service: shell_command.initiate_paneltest_start
+  initiate_paneltest_stop:
+    alias: "shell_command.initiate_paneltest_stop"
+    sequence:
+      - service: shell_command.initiate_paneltest_stop
