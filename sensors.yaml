@@ -20,11 +20,6 @@
     - battery.temperature
 #- platform: nut   # Repeat for next NUT-UPS...
 #  name: smartups2 # etc.
-######## Weather ######
-- platform: yr
-  monitored_conditions:
-    - symbol
-  name: yr
 ####### System ########
 - platform: cpuspeed
   name: CPU
@@ -58,4 +53,9 @@
   display_options:
     - time
     - date
+######## Weather ######
+- platform: yr
+  monitored_conditions:
+    - symbol
+  name: yr
 ###############
