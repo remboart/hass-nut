@@ -35,19 +35,6 @@ UPS2:
   - script.initiate_selftest_stop
   - script.initiate_paneltest_start
   - script.initiate_paneltest_stop
-######## Outdoors #########
-Garden:
-  name: Garden
-  icon: mdi:flower
-  view: true
-  entities:
-  - group.Weather
-Weather:
-  name: Weather
-  view: false
-  entities:
-  - sensor.yr_symbol
-  - sun.sun
 ####### System #######
 Systeem:
   name: System
@@ -87,4 +74,17 @@ Network:
   - sensor.received_eth0
   - sensor.sent_eth0
   - sensor.ipv6_address_eth0
+######## Outdoors #########
+Garden:
+  name: Garden
+  icon: mdi:flower
+  view: true
+  entities:
+  - group.Weather
+Weather:
+  name: Weather
+  view: false
+  entities:
+  - sensor.yr_symbol
+  - sun.sun
 ##################
