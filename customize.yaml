@@ -1,55 +1,81 @@
-###### Customize ########
+###### UPS ########
   sensor.smartups_status_data:
     friendly_name: 'UPS Status'
     icon: mdi:battery-unknown
   sensor.smartups_battery_voltage:
-    friendly_name: 'Batterij Voltage'
+    friendly_name: 'Battery Voltage'
     icon: mdi:car-battery
   sensor.smartups_beeper_status:
     friendly_name: 'Beeper Status'
     icon: mdi:volume-low
   sensor.smartups_battery_runtime:
-    friendly_name: 'Batterij Doorlooptijd'
+    friendly_name: 'Battery Runtime'
     icon: mdi:timer
   sensor.smartups_manufacturer:
-    friendly_name: 'Producent'
+    friendly_name: 'Manufacturer'
     icon: mdi:information-outline
   sensor.smartups_model:
     friendly_name: 'Model'
     icon: mdi:information-outline
   sensor.smartups_serial_number:
-    friendly_name: 'Serienummer'
+    friendly_name: 'Serial Number'
     icon: mdi:information-outline
   sensor.smartups_battery_charge:
-    friendly_name: 'Batterij Lading'
+    friendly_name: 'Battery Charge'
     icon: mdi:battery-charging
   sensor.smartups_input_voltage:
-    friendly_name: 'Ingang Voltage'
+    friendly_name: 'Input Voltage'
     icon: mdi:power-plug
   sensor.smartups_selftest_result:
-    friendly_name: 'Zelf Test'
+    friendly_name: 'Self Test'
     icon: mdi:checkbox-marked
   sensor.smartups_battery_temperature:
-    friendly_name: 'Inverter Temperatuur'
+    friendly_name: 'Inverter Temperature'
     icon: mdi:thermometer
   script.beeper_disable:
-    friendly_name: 'Beeper Uitschakelen'
+    friendly_name: 'Beeper Enable'
     icon: mdi:volume-mute
   script.beeper_enable:
-    friendly_name: 'Beeper Inschakelen'
+    friendly_name: 'Beeper Disable'
     icon: mdi:volume-high
   script.initiate_selftest_quick:
-    friendly_name: 'Start Snelle Batterij Test'
+    friendly_name: 'Start Quick Battery Test'
     icon: mdi:play
   script.initiate_selftest_deep:
-    friendly_name: 'Start Diepe Batterij Test'
+    friendly_name: 'Start Deep Battery Test'
     icon: mdi:skip-forward
   script.initiate_selftest_stop:
-    friendly_name: 'Stop Batterij Test'
+    friendly_name: 'Stop Battery Test'
     icon: mdi:stop
   script.initiate_paneltest_start:
-    friendly_name: 'Start Paneel Test'
+    friendly_name: 'Start Panel Test'
     icon: mdi:play
   script.initiate_paneltest_stop:
-    friendly_name: 'Stop Paneel Test'
+    friendly_name: 'Stop Panel Test'
     icon: mdi:stop
+###### System #######
+  sensor.cpu_use:
+    friendly_name: 'CPU Use'
+    icon: mdi:speedometer
+  sensor.ram_free:
+    icon: mdi:poll
+    friendly_name: "Ram Free"
+  sensor.last_boot:
+    icon: mdi:clock-start
+  sensor.CPUtemp:
+    friendly_name: 'CPU Temperature'
+    icon: mdi:thermometer
+###### Time ########
+  sensor.time:
+    friendly_name: 'Clock'
+    icon: mdi:clock
+  sensor.date:
+    friendly_name: 'Date'
+    icon: mdi:calendar
+###### Weather ########
+  sun.sun:
+    friendly_name: 'Day or night'
+    icon: mdi:weather-sunny
+  sensor.yr_symbol:
+    friendly_name: 'Outsite status'
+############
