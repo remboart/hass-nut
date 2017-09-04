@@ -7,24 +7,18 @@ homeassistant:
   unit_system: metric
   time_zone: Europe/Amsterdam
   customize: !include customize.yaml
-#
 group: !include groups.yaml
 zone: !include zones.yaml
 script: !include scripts.yaml
 sensor: !include sensor.yaml
 automation: !include automations.yaml
-# Enables the frontend
 frontend:
-# Enables configuration UI
 config:
 http:
-  api_password: !secret http_password
-  # Uncomment this if you are using SSL or running in Docker etc
-  # base_url: example.duckdns.org:8123
+  api_password: pass
 updater:
   name: updater
 discovery:
-# Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
 history:
 logbook:
@@ -39,4 +33,9 @@ shell_command:
   initiate_selftest_stop: upscmd -u admin -p pass smartups@192.168.i.p test.battery.stop
   initiate_paneltest_start: upscmd -u admin -p pass smartups@192.168.i.p test.panel.start
   initiate_paneltest_stop: upscmd -u admin -p pass smartups@192.168.i.p test.panel.stop
-
+###### Weblinks #######
+weblink:
+  entities:
+    - name: Router
+      url: http://192.168.i.p  # your router
+###############
