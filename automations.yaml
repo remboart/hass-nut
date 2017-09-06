@@ -1,0 +1,111 @@
+#############################
+- id: load_on
+  alias: "Turn on load"
+  trigger:
+    platform: state
+    entity_id: input_select.power_options
+    to: "Turn on load"
+  action:
+    service: script.turn_on
+    entity_id: script.load_on  
+- id: load_off
+  alias: "Turn off load"
+  trigger:
+    platform: state
+    entity_id: input_select.power_options
+    to: "Turn off load"
+  action:
+    service: script.turn_on
+    entity_id: script.load_off
+- id: shutdown_stayoff
+  alias: "Shutdown remain off"
+  trigger:
+    platform: state
+    entity_id: input_select.power_options
+    to: "Shutdown remain off"
+  action:
+    service: script.turn_on
+    entity_id: script.shutdown_stayoff  
+- id: shutdown_stop
+  alias: "Stop shutdown"
+  trigger:
+    platform: state
+    entity_id: input_select.power_options
+    to: "Stop shutdown"
+  action:
+    service: script.turn_on
+    entity_id: script.shutdown_stop
+- id: beeper_mute
+  alias: "Beeper mute"
+  trigger:
+    platform: state
+    entity_id: input_select.beeper_options
+    to: "Beeper mute"
+  action:
+    service: script.turn_on
+    entity_id: script.beeper_mute
+- id: beeper_disable
+  alias: "Beeper disable"
+  trigger:
+    platform: state
+    entity_id: input_select.beeper_options
+    to: "Beeper disable"
+  action:
+    service: script.turn_on
+    entity_id: script.beeper_disable  
+- id: beeper_enable
+  alias: "Beeper enable"
+  trigger:
+    platform: state
+    entity_id: input_select.beeper_options
+    to: "Beeper enable"
+  action:
+    service: script.turn_on
+    entity_id: script.beeper_enable
+- id: initiate_selftest_quick
+  alias: "Quick battery test"
+  trigger:
+    platform: state
+    entity_id: input_select.test_options
+    to: "Quick battery test"
+  action:
+    service: script.turn_on
+    entity_id: script.initiate_selftest_quick
+- id: initiate_selftest_deep
+  alias: "Deep battery test"
+  trigger:
+    platform: state
+    entity_id: input_select.test_options
+    to: "Deep battery test"
+  action:
+    service: script.turn_on
+    entity_id: script.initiate_selftest_deep 
+- id: initiate_selftest_stop
+  alias: "Stop battery test"
+  trigger:
+    platform: state
+    entity_id: input_select.test_options
+    to: "Stop battery test"
+  action:
+    service: script.turn_on
+    entity_id: script.initiate_selftest_stop
+- id: initiate_paneltest_start
+  alias: "Start panel test"
+  trigger:
+    platform: state
+    entity_id: input_select.test_options
+    to: "Start panel test"
+  action:
+    service: script.turn_on
+    entity_id: script.initiate_paneltest_start 
+- id: initiate_paneltest_stop
+  alias: "Stop panel test"
+  trigger:
+    platform: state
+    entity_id: input_select.test_options
+    to: "Stop panel test"
+  action:
+    service: script.turn_on
+    entity_id: script.initiate_paneltest_stop
+####################
+
