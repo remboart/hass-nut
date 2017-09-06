@@ -33,9 +33,43 @@ shell_command:
   initiate_selftest_stop: upscmd -u admin -p pass smartups@192.168.i.p test.battery.stop
   initiate_paneltest_start: upscmd -u admin -p pass smartups@192.168.i.p test.panel.start
   initiate_paneltest_stop: upscmd -u admin -p pass smartups@192.168.i.p test.panel.stop
+  beeper_mute: upscmd -u admin -p pass smartups@192.168.i.p beeper.mute
+  load_on: upscmd -u admin -p pass smartups@192.168.i.p load.on
+  load_off: upscmd -u admin -p pass smartups@192.168.i.p load.off
+  shutdown_stayoff: upscmd -u admin -p pass smartups@192.168.i.p shutdown.stayoff
+  shutdown_stop: upscmd -u admin -p pass smartups@192.168.i.p shutdown.stop
+input_select:
+  beeper_options:
+    name: Beeper Options
+    options:
+     - "Beeper enable"
+     - "Beeper mute"
+     - "Beeper disable"
+    initial: "Beeper enable"
+    icon: mdi:volume-low
+  test_options:
+    name: Test Options
+    options:
+     - "Stop battery test"
+     - "Quick battery test"
+     - "Deep battery test"
+     - "Start panel test"
+#     - "Stop panel test"
+    initial: "Stop battery test"
+    icon: mdi:checkbox-marked
+  power_options:
+    name: Power Options
+    options:
+     - "Turn on load"
+     - "Turn off load"
+#     - "Shutdown remain off"
+     - "Stop shutdown"
+    initial: "Stop shutdown"
+    icon: mdi:power
+#######################
 ###### Weblinks #######
 weblink:
   entities:
     - name: Router
       url: http://192.168.i.p  # your router
-###############
+#######################
