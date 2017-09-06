@@ -1,4 +1,4 @@
-###### Scripts #########
+###### Scripts UPS #########
   beeper_enable:
     alias: "shell_command.beeper_enable"
     sequence:
@@ -27,3 +27,24 @@
     alias: "shell_command.initiate_paneltest_stop"
     sequence:
       - service: shell_command.initiate_paneltest_stop
+  beeper_mute:
+    alias: "shell_command.beeper_mute"
+    sequence:
+      - service: shell_command.beeper_mute
+  load_on:
+    alias: "shell_command.load_on"
+    sequence:
+      - service: shell_command.load_on
+  load_off:
+    alias: "shell_command.load_off"
+    sequence:
+      - service: shell_command.load_off
+  shutdown_stayoff:
+    alias: "shell_command.initiate_shutdown_stayoff"
+    sequence:
+      - service: shell_command.initiate_shutdown_stayoff
+  shutdown_stop:
+    alias: "shell_command.shutdown_stop"
+    sequence:
+      - service: shell_command.shutdown_stop
+#######################################
