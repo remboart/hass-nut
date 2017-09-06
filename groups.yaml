@@ -23,19 +23,24 @@ UPS2:
   - sensor.smartups_battery_voltage
   - sensor.smartups_input_voltage
   - sensor.smartups_battery_temperature
+  - input_select.beeper_options
   - sensor.smartups_beeper_status
-  - script.beeper_disable
-  - script.beeper_enable
+#  - script.beeper_disable
+#  - script.beeper_enable
+#  - script.beeper_mute
   - sensor.smartups_manufacturer
   - sensor.smartups_model
   - sensor.smartups_serial_number
+  - input_select.test_options
   - sensor.smartups_selftest_result
-  - script.initiate_selftest_quick
-  - script.initiate_selftest_deep
-  - script.initiate_selftest_stop
-  - script.initiate_paneltest_start
-  - script.initiate_paneltest_stop
-####### System #######
+#  - script.initiate_selftest_quick
+#  - script.initiate_selftest_deep
+#  - script.initiate_selftest_stop
+#  - script.initiate_paneltest_start
+#  - script.initiate_paneltest_stop
+  - input_select.power_options
+###########################
+####### System ############
 Systeem:
   name: System
   icon: mdi:settings
