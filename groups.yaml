@@ -10,35 +10,67 @@ UPS:
   icon: mdi:battery
   view: true
   entities:
-#  - group.UPS1
+  - group.UPS1
   - group.UPS2
-#UPS1:
-UPS2:
-  name: APCSmartUPSXL
+  - group.details1
+  - group.information1
+  - group.details2
+  - group.information2
+  - group.options2
+UPS1:
+  name: UPS1
   view: false
   entities:
-  - sensor.smartups_status_data
-  - sensor.smartups_battery_runtime
-  - sensor.smartups_battery_charge
-  - sensor.smartups_battery_voltage
-  - sensor.smartups_input_voltage
-  - sensor.smartups_battery_temperature
+  - sensor.UPS1_status_data
+  - input_select.details1
+  - input_select.info_options1
+UPS2:
+  name: UPS2
+  view: false
+  entities:
+  - sensor.UPS2_status_data
+  - input_select.details2
+  - input_select.options2
+  - input_select.info_options2
+details1:
+  name: Details1
+  view: false
+  entities:
+  - sensor.UPS1_battery_runtime
+  - sensor.UPS1_battery_charge
+  - sensor.UPS1_battery_voltage
+information1:
+  name: Information1
+  view: false
+  entities:
+  - sensor.UPS1_manufacturer
+  - sensor.UPS1_model
+  - sensor.UPS1_serial_number
+details2:
+  name: Details2
+  view: false
+  entities:
+  - sensor.UPS2_battery_runtime
+  - sensor.UPS2_battery_charge
+  - sensor.UPS2_battery_voltage
+  - sensor.UPS2_input_voltage
+  - sensor.UPS2_battery_temperature
+options2:
+  name: Options2
+  view: false
+  entities:
   - input_select.beeper_options
-  - sensor.smartups_beeper_status
-#  - script.beeper_disable
-#  - script.beeper_enable
-#  - script.beeper_mute
-  - sensor.smartups_manufacturer
-  - sensor.smartups_model
-  - sensor.smartups_serial_number
+  - sensor.UPS2_beeper_status
   - input_select.test_options
-  - sensor.smartups_selftest_result
-#  - script.initiate_selftest_quick
-#  - script.initiate_selftest_deep
-#  - script.initiate_selftest_stop
-#  - script.initiate_paneltest_start
-#  - script.initiate_paneltest_stop
+  - sensor.UPS2_selftest_result
   - input_select.power_options
+information2:
+  name: Information2
+  view: false
+  entities:
+  - sensor.UPS2_manufacturer
+  - sensor.UPS2_model
+  - sensor.UPS2_serial_number
 ###########################
 ####### System ############
 Systeem:
