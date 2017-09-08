@@ -1,6 +1,6 @@
 ###### UPS ########
   sensor.UPS1_status_data:
-    friendly_name: 'UPS Status'
+    friendly_name: 'UPS1 Status'
     icon: mdi:battery-unknown
   sensor.UPS1_battery_voltage:
     friendly_name: 'Batterij Voltage'
@@ -21,7 +21,7 @@
     friendly_name: 'Serienummer'
     icon: mdi:information-outline
   sensor.UPS2_status_data:
-    friendly_name: 'UPS Status'
+    friendly_name: 'UPS2 Status'
     icon: mdi:battery-unknown
   sensor.UPS2_battery_voltage:
     friendly_name: 'Batterij Voltage'
