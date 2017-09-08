@@ -107,5 +107,95 @@
   action:
     service: script.turn_on
     entity_id: script.initiate_paneltest_stop
-####################
+#####################################
+- id: vis_info1
+  alias: Information1
+  trigger:
+    - platform: state
+      entity_id: input_select.info_options1
+    - platform: homeassistant
+      event: start
+  action:
+    service: script.group_visibility1
+    data:
+      entity_id: group.information1
+      cond: input_select.info_options1
+      visible_state: "Visable"
+- id: vis_det1
+  alias: Details1
+  trigger:
+    - platform: state
+      entity_id: input_select.details1
+    - platform: homeassistant
+      event: start
+  action:
+    service: script.group_visdet1
+    data:
+      entity_id: group.details1
+      cond: input_select.details1
+      visible_state: "Visable"
+- id: vis_det2
+  alias: Details2
+  trigger:
+    - platform: state
+      entity_id: input_select.details2
+    - platform: homeassistant
+      event: start
+  action:
+    service: script.group_visdet2
+    data:
+      entity_id: group.details2
+      cond: input_select.details2
+      visible_state: 'Visable'
+- id: vis_info2
+  alias: Information2
+  trigger:
+    - platform: state
+      entity_id: input_select.info_options2
+    - platform: homeassistant
+      event: start
+  action:
+    service: script.group_visibility2
+    data:
+      entity_id: group.information2
+      cond: input_select.info_options2
+      visible_state: 'Visable'
+- id: vis_opt2
+  alias: Options2
+  trigger:
+    - platform: state
+      entity_id: input_select.options2
+    - platform: homeassistant
+      event: start
+  action:
+    service: script.group_visibilityopt2
+    data:
+      entity_id: group.options2
+      cond: input_select.options2
+      visible_state: 'Visable'
+######################################
+- id: vis_detcharge1
+  alias: DetailsCharge1
+  trigger:
+    platform: state
+    entity_id: sensor.UPS1_battery_charge
+    from: "100"
+  action:
+      service: input_select.select_option
+      data:
+        entity_id: input_select.details1
+        option: "Visable"
+- id: vis_detcharge2
+  alias: DetailsCharge2
+  trigger:
+    platform: state
+    entity_id: sensor.UPS2_battery_charge
+    from: "100"
+  action:
+      service: input_select.select_option
+      data:
+        entity_id: input_select.details2
+        option: "Visable"
+#####################################
+
 
