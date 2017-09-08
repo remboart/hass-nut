@@ -25,7 +25,7 @@ logbook:
 sun:
   name: sun
 ###### APC SmartUPS ########
-shell_command:
+shell_command:      # Edit all lines in shell_command
   beeper_disable: upscmd -u admin -p pass smartups@192.168.i.p beeper.disable
   beeper_enable: upscmd -u admin -p pass smartups@192.168.i.p beeper.enable
   initiate_selftest_quick: upscmd -u admin -p pass smartups@192.168.i.p test.battery.start.quick
@@ -46,17 +46,52 @@ input_select:
      - "Beeper mute"
      - "Beeper disable"
     initial: "Beeper enable"
-    icon: mdi:volume-low
+    icon: mdi:volume-high
+  options2:
+    name: UPS2 Options
+    options:
+     - "Visable"
+     - "Hide"
+    initial: "Hide"
+    icon: mdi:settings-box
+  info_options2:
+    name: UPS2 Information
+    options:
+     - "Visable"
+     - "Hide"
+    initial: "Hide"
+    icon: mdi:information
+  info_options1:
+    name: UPS1 Information
+    options:
+     - "Visable"
+     - "Hide"
+    initial: "Hide"
+    icon: mdi:information
+  details2:
+    name: UPS2 Details
+    options:
+     - "Visable"
+     - "Hide"
+    initial: "Hide"
+    icon: mdi:magnify-plus-outline
+  details1:
+    name: UPS1 Details
+    options:
+     - "Visable"
+     - "Hide"
+    initial: "Hide"
+    icon: mdi:magnify-plus-outline
   test_options:
     name: Test Options
     options:
      - "Stop battery test"
+#     - "Stop panel test"
      - "Quick battery test"
      - "Deep battery test"
      - "Start panel test"
-#     - "Stop panel test"
     initial: "Stop battery test"
-    icon: mdi:checkbox-marked
+    icon: mdi:play
   power_options:
     name: Power Options
     options:
@@ -67,9 +102,10 @@ input_select:
     initial: "Stop shutdown"
     icon: mdi:power
 #######################
+#######################
 ###### Weblinks #######
 weblink:
   entities:
     - name: Router
-      url: http://192.168.i.p  # your router
+      url: http://192.168.i.p  # edit your router
 #######################
