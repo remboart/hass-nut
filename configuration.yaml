@@ -26,18 +26,18 @@ sun:
   name: sun
 ###### APC SmartUPS ########
 shell_command:      # Edit all lines in shell_command
-  beeper_disable: upscmd -u admin -p pass smartups@192.168.i.p beeper.disable
-  beeper_enable: upscmd -u admin -p pass smartups@192.168.i.p beeper.enable
-  initiate_selftest_quick: upscmd -u admin -p pass smartups@192.168.i.p test.battery.start.quick
-  initiate_selftest_deep: upscmd -u admin -p pass smartups@192.168.i.p test.battery.start.deep
-  initiate_selftest_stop: upscmd -u admin -p pass smartups@192.168.i.p test.battery.stop
-  initiate_paneltest_start: upscmd -u admin -p pass smartups@192.168.i.p test.panel.start
-  initiate_paneltest_stop: upscmd -u admin -p pass smartups@192.168.i.p test.panel.stop
-  beeper_mute: upscmd -u admin -p pass smartups@192.168.i.p beeper.mute
-  load_on: upscmd -u admin -p pass smartups@192.168.i.p load.on
-  load_off: upscmd -u admin -p pass smartups@192.168.i.p load.off
-  shutdown_stayoff: upscmd -u admin -p pass smartups@192.168.i.p shutdown.stayoff
-  shutdown_stop: upscmd -u admin -p pass smartups@192.168.i.p shutdown.stop
+  beeper_disable: upscmd -u admin -p pass UPS2@192.168.i.p beeper.disable
+  beeper_enable: upscmd -u admin -p pass UPS2@192.168.i.p beeper.enable
+  initiate_selftest_quick: upscmd -u admin -p pass UPS2@192.168.i.p test.battery.start.quick
+  initiate_selftest_deep: upscmd -u admin -p pass UPS2@192.168.i.p test.battery.start.deep
+  initiate_selftest_stop: upscmd -u admin -p pass UPS2@192.168.i.p test.battery.stop
+  initiate_paneltest_start: upscmd -u admin -p pass UPS2@192.168.i.p test.panel.start
+  initiate_paneltest_stop: upscmd -u admin -p pass UPS2@192.168.i.p test.panel.stop
+  beeper_mute: upscmd -u admin -p pass UPS2@192.168.i.p beeper.mute
+  load_on: upscmd -u admin -p pass UPS2@192.168.i.p load.on
+  load_off: upscmd -u admin -p pass UPS2@192.168.i.p load.off
+  shutdown_stayoff: upscmd -u admin -p pass UPS2@192.168.i.p shutdown.stayoff
+  shutdown_stop: upscmd -u admin -p pass UPS2@192.168.i.p shutdown.stop
 input_select:
   beeper_options:
     name: Beeper Options
