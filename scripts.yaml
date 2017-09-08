@@ -48,3 +48,34 @@
     sequence:
       - service: shell_command.shutdown_stop
 #######################################
+  group_visdet1:
+    sequence:
+      - service: group.set_visibility
+        data_template:
+          entity_id: '{{ entity_id }}'
+          visible: '{{ is_state(cond, visible_state) }}'
+  group_visdet2:
+    sequence:
+      - service: group.set_visibility
+        data_template:
+          entity_id: '{{ entity_id }}'
+          visible: '{{ is_state(cond, visible_state) }}'
+  group_visibility1:
+    sequence:
+      - service: group.set_visibility
+        data_template:
+          entity_id: '{{ entity_id }}'
+          visible: '{{ is_state(cond, visible_state) }}'
+  group_visibility2:
+    sequence:
+      - service: group.set_visibility
+        data_template:
+          entity_id: '{{ entity_id }}'
+          visible: '{{ is_state(cond, visible_state) }}'
+  group_visibilityopt2:
+    sequence:
+      - service: group.set_visibility
+        data_template:
+          entity_id: '{{ entity_id }}'
+          visible: '{{ is_state(cond, visible_state) }}'
+####################################
