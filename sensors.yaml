@@ -1,9 +1,24 @@
 ###### NUT #########
 - platform: nut
-  name: smartups
+  name: UPS1
+  host: 127.0.0.1
+  port: 3493
+  alias: UPS1
+  username: admin
+  password: pass
+  resources:
+    - ups.status
+    - battery.charge
+    - battery.runtime
+    - battery.voltage
+    - ups.mfr
+    - ups.model
+    - ups.serial
+- platform: nut
+  name: UPS2
   host: 192.168.i.p
   port: 3493
-  alias: smartups
+  alias: UPS2
   username: admin
   password: pass
   resources:
@@ -18,8 +33,6 @@
     - ups.beeper.status
     - ups.test.result
     - battery.temperature
-#- platform: nut   # Repeat for next NUT-UPS...
-#  name: smartups2 # etc.
 ####### System ########
 - platform: cpuspeed
   name: CPU
