@@ -53,6 +53,27 @@
   script.initiate_paneltest_stop:
     friendly_name: 'Stop Panel Test'
     icon: mdi:stop
+  group.information1:
+    friendly_name: 'UPS1 Information'
+    icon: mdi:information
+  group.information2:
+    friendly_name: 'UPS2 Information'
+    icon: mdi:information
+  group.options2:
+    friendly_name: 'UPS2 Options'
+    icon: mdi:settings
+  group.details1:
+    friendly_name: 'UPS1 Details'
+    icon: mdi:magnify
+  group.details2:
+    friendly_name: 'UPS2 Details'
+    icon: mdi:magnify
+  group.UPS2:
+    friendly_name: 'UPS2'
+    icon: mdi:battery
+  group.UPS1:
+    friendly_name: 'UPS1'
+    icon: mdi:battery
 ###### System #######
   sensor.cpu_use:
     friendly_name: 'CPU Use'
