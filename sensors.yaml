@@ -1,11 +1,11 @@
 ###### NUT #########
 - platform: nut
   name: UPS1
-  host: 127.0.0.1
+  host: !secret ip_ups1
   port: 3493
   alias: UPS1
-  username: admin
-  password: pass
+  username: !secret nutuser_ups1
+  password: !secret nutpass_ups1
   resources:
     - ups.status
     - battery.charge
@@ -16,11 +16,11 @@
     - ups.serial
 - platform: nut
   name: UPS2
-  host: 192.168.i.p
+  host: !secret ip_ups2
   port: 3493
   alias: UPS2
-  username: admin
-  password: pass
+  username: !secret nutuser_ups2
+  password: !secret nutpass_ups2
   resources:
     - ups.status
     - battery.charge
@@ -33,6 +33,11 @@
     - ups.beeper.status
     - ups.test.result
     - battery.temperature
+######## Weather ######
+- platform: yr
+  monitored_conditions:
+    - symbol
+  name: yr
 ####### System ########
 - platform: cpuspeed
   name: CPU
@@ -66,9 +71,4 @@
   display_options:
     - time
     - date
-######## Weather ######
-- platform: yr
-  monitored_conditions:
-    - symbol
-  name: yr
 ###############

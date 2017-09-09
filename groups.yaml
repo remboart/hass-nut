@@ -4,7 +4,61 @@ default_view:
   entities:
   - group.Time
   - group.Weather
+######## Outdoors #########
+Garden:
+  name: Garden
+  icon: mdi:flower
+  view: true
+  entities:
+  - group.Weather
+Weather:
+  name: Weather
+  view: false
+  entities:
+  - sensor.yr_symbol
+  - sun.sun
+####### System #######
+Systeem:
+  name: System
+  icon: mdi:settings
+  view: true
+  entities:
+  - group.Systemvalues
+  - group.Network
+  - weblink.Router
+  - group.Time
+  - updater.updater
+Time:
+  name: Time
+  view: false
+  entities:
+  - sensor.time
+  - sensor.date
+Systemvalues:
+  name: Systemvalues
+  view: false
+  entities:
+  - sensor.cpu
+  - sensor.CPUtemp
+  - sensor.cpu_use
+  - sensor.ram_use
+  - sensor.ram_free
+  - sensor.last_boot
+  - sensor.since_last_boot
+  - sensor.disk_free
+  - sensor.disk_use_home
+Network:
+  name: Network
+  view: false
+  entities:
+  - sensor.packets_received_eth0
+  - sensor.packets_sent_eth0
+  - sensor.received_eth0
+  - sensor.sent_eth0
+  - sensor.ipv6_address_eth0
+#######################
 ###### UPS-ses ########
+#######################
 UPS:
   name: UPS
   icon: mdi:battery
@@ -15,15 +69,15 @@ UPS:
   - group.details1
   - group.information1
   - group.details2
-  - group.information2
   - group.options2
+  - group.information2
 UPS1:
   name: UPS1
   view: false
   entities:
   - sensor.UPS1_status_data
   - input_select.details1
-  - input_select.info_options1
+  - input_select.info1
 UPS2:
   name: UPS2
   view: false
@@ -31,7 +85,7 @@ UPS2:
   - sensor.UPS2_status_data
   - input_select.details2
   - input_select.options2
-  - input_select.info_options2
+  - input_select.info2
 details1:
   name: Details1
   view: false
@@ -71,57 +125,4 @@ information2:
   - sensor.UPS2_manufacturer
   - sensor.UPS2_model
   - sensor.UPS2_serial_number
-###########################
-####### System ############
-Systeem:
-  name: System
-  icon: mdi:settings
-  view: true
-  entities:
-  - group.Systemvalues
-  - group.Network
-  - weblink.Router
-  - group.Time
-  - updater.updater
-Time:
-  name: Time
-  view: false
-  entities:
-  - sensor.time
-  - sensor.date
-Systemvalues:
-  name: Systemvalues
-  view: false
-  entities:
-  - sensor.cpu
-  - sensor.CPUtemp
-  - sensor.cpu_use
-  - sensor.ram_use
-  - sensor.ram_free
-  - sensor.last_boot
-  - sensor.since_last_boot
-  - sensor.disk_free
-  - sensor.disk_use_home
-Network:
-  name: Network
-  view: false
-  entities:
-  - sensor.packets_received_eth0
-  - sensor.packets_sent_eth0
-  - sensor.received_eth0
-  - sensor.sent_eth0
-  - sensor.ipv6_address_eth0
-######## Outdoors #########
-Garden:
-  name: Garden
-  icon: mdi:flower
-  view: true
-  entities:
-  - group.Weather
-Weather:
-  name: Weather
-  view: false
-  entities:
-  - sensor.yr_symbol
-  - sun.sun
-##################
+######################

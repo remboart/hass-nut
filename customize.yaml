@@ -1,78 +1,79 @@
-###### UPS ########
+###### UPS-ses ########
+## edit for language ##
   sensor.UPS1_status_data:
     friendly_name: 'UPS1 Status'
     icon: mdi:battery-unknown
   sensor.UPS1_battery_voltage:
-    friendly_name: 'Batterij Voltage'
+    friendly_name: 'Battery Voltage'
     icon: mdi:car-battery
   sensor.UPS1_battery_runtime:
-    friendly_name: 'Batterij Doorlooptijd'
+    friendly_name: 'Battery Runtime'
     icon: mdi:timer
   sensor.UPS1_battery_charge:
-    friendly_name: 'Batterij Lading'
+    friendly_name: 'Battery Charge'
     icon: mdi:battery-charging
   sensor.UPS1_manufacturer:
-    friendly_name: 'Producent'
+    friendly_name: 'Manufacturer'
     icon: mdi:information-outline
   sensor.UPS1_model:
     friendly_name: 'Model'
     icon: mdi:information-outline
   sensor.UPS1_serial_number:
-    friendly_name: 'Serienummer'
+    friendly_name: 'Serial Number'
     icon: mdi:information-outline
   sensor.UPS2_status_data:
     friendly_name: 'UPS2 Status'
     icon: mdi:battery-unknown
   sensor.UPS2_battery_voltage:
-    friendly_name: 'Batterij Voltage'
+    friendly_name: 'Battery Voltage'
     icon: mdi:car-battery
   sensor.UPS2_beeper_status:
     friendly_name: 'Beeper Status'
     icon: mdi:volume-low
   sensor.UPS2_battery_runtime:
-    friendly_name: 'Batterij Doorlooptijd'
+    friendly_name: 'Battery Runtime'
     icon: mdi:timer
   sensor.UPS2_manufacturer:
-    friendly_name: 'Producent'
+    friendly_name: 'Manufacturer'
     icon: mdi:information-outline
   sensor.UPS2_model:
     friendly_name: 'Model'
     icon: mdi:information-outline
   sensor.UPS2_serial_number:
-    friendly_name: 'Serienummer'
+    friendly_name: 'Serial Number'
     icon: mdi:information-outline
   sensor.UPS2_battery_charge:
-    friendly_name: 'Batterij Lading'
+    friendly_name: 'Battery Charge'
     icon: mdi:battery-charging
   sensor.UPS2_input_voltage:
-    friendly_name: 'Ingang Voltage'
+    friendly_name: 'Input Voltage'
     icon: mdi:power-plug
   sensor.UPS2_selftest_result:
-    friendly_name: 'Zelf Test'
+    friendly_name: 'Self Test'
     icon: mdi:checkbox-marked
   sensor.UPS2_battery_temperature:
-    friendly_name: 'Inverter Temperatuur'
+    friendly_name: 'Inverter Temperature'
     icon: mdi:thermometer
   script.beeper_disable:
-    friendly_name: 'Beeper Uitschakelen'
+    friendly_name: 'Beeper Disable'
     icon: mdi:volume-mute
   script.beeper_enable:
-    friendly_name: 'Beeper Inschakelen'
+    friendly_name: 'Beeper Enable'
     icon: mdi:volume-high
   script.initiate_selftest_quick:
-    friendly_name: 'Start Snelle Batterij Test'
+    friendly_name: 'Start Quick Battery Test'
     icon: mdi:play
   script.initiate_selftest_deep:
-    friendly_name: 'Start Diepe Batterij Test'
+    friendly_name: 'Start Deep Battery Test'
     icon: mdi:skip-forward
   script.initiate_selftest_stop:
-    friendly_name: 'Stop Batterij Test'
+    friendly_name: 'Stop Battery Test'
     icon: mdi:stop
   script.initiate_paneltest_start:
-    friendly_name: 'Start Paneel Test'
+    friendly_name: 'Start Panel Test'
     icon: mdi:play
   script.initiate_paneltest_stop:
-    friendly_name: 'Stop Paneel Test'
+    friendly_name: 'Stop Panel Test'
     icon: mdi:stop
   group.information1:
     friendly_name: 'UPS1 Information'
@@ -95,6 +96,30 @@
   group.UPS1:
     friendly_name: 'UPS1'
     icon: mdi:battery
+  input_select.options2:
+    friendly_name: 'UPS2 Options'
+    icon: mdi:settings-box
+  input_select.info2:
+    friendly_name: 'UPS2 Information'
+    icon: mdi:information
+  input_select.info1:
+    friendly_name: 'UPS1 Information'
+    icon: mdi:information
+  input_select.details2:
+    friendly_name: 'UPS2 Details'
+    icon: mdi:magnify-plus-outline
+  input_select.details1:
+    friendly_name: 'UPS1 Details'
+    icon: mdi:magnify-plus-outline
+  input_select.beeper_options:
+    friendly_name: 'Beeper Options'
+    icon: mdi:volume-high
+  input_select.test_options:
+    friendly_name: 'Test Options'
+    icon: mdi:play
+  input_select.power_options:
+    friendly_name: 'Power Options'
+    icon: mdi:power
 #####################
 ###### System #######
   sensor.cpu_use:
@@ -122,3 +147,4 @@
   sensor.yr_symbol:
     friendly_name: 'Outsite status'
 ############
+

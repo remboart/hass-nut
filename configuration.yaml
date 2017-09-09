@@ -1,21 +1,21 @@
 ###### Configuration ########
 homeassistant:
-  name: remboart
+  name: Home
   latitude: !secret homeassistant_lat
   longitude: !secret homeassistant_long
-  elevation: -2
+  elevation:  !secret homeassistant_elevation
   unit_system: metric
-  time_zone: Europe/Amsterdam
+  time_zone: !secret homeassistant_timezone
   customize: !include customize.yaml
 group: !include groups.yaml
 zone: !include zones.yaml
 script: !include scripts.yaml
-sensor: !include sensor.yaml
+sensor: !include sensors.yaml
 automation: !include automations.yaml
 frontend:
 config:
 http:
-  api_password: pass
+  api_password: !secret http_password
 updater:
   name: updater
 discovery:
@@ -24,21 +24,51 @@ history:
 logbook:
 sun:
   name: sun
-###### APC SmartUPS ########
-shell_command:      # Edit all lines in shell_command
-  beeper_disable: upscmd -u admin -p pass UPS2@192.168.i.p beeper.disable
-  beeper_enable: upscmd -u admin -p pass UPS2@192.168.i.p beeper.enable
-  initiate_selftest_quick: upscmd -u admin -p pass UPS2@192.168.i.p test.battery.start.quick
-  initiate_selftest_deep: upscmd -u admin -p pass UPS2@192.168.i.p test.battery.start.deep
-  initiate_selftest_stop: upscmd -u admin -p pass UPS2@192.168.i.p test.battery.stop
-  initiate_paneltest_start: upscmd -u admin -p pass UPS2@192.168.i.p test.panel.start
-  initiate_paneltest_stop: upscmd -u admin -p pass UPS2@192.168.i.p test.panel.stop
-  beeper_mute: upscmd -u admin -p pass UPS2@192.168.i.p beeper.mute
-  load_on: upscmd -u admin -p pass UPS2@192.168.i.p load.on
-  load_off: upscmd -u admin -p pass UPS2@192.168.i.p load.off
-  shutdown_stayoff: upscmd -u admin -p pass UPS2@192.168.i.p shutdown.stayoff
-  shutdown_stop: upscmd -u admin -p pass UPS2@192.168.i.p shutdown.stop
+###### UPS ########
+shell_command:
+  beeper_disable: !secret beeper_disable
+  beeper_enable: !secret beeper_enable
+  beeper_mute: !secret beeper_mute
+  initiate_selftest_quick: !secret initiate_selftest_quick
+  initiate_selftest_deep: !secret initiate_selftest_deep
+  initiate_selftest_stop: !secret initiate_selftest_stop
+  initiate_paneltest_start: !secret initiate_paneltest_start
+  initiate_paneltest_stop: !secret initiate_paneltest_stop
+  load_on: !secret load_on
+  load_off: !secret load_off
+  shutdown_stayoff: !secret shutdown_stayoff
+  shutdown_stop: !secret shutdown_stop
 input_select:
+  options2:
+    name: UPS2 Options
+    options:
+     - "Visible"
+     - "Hide"
+    initial: "Hide"
+  info2:
+    name: UPS2 Information
+    options:
+     - "Visible"
+     - "Hide"
+    initial: "Hide"
+  info1:
+    name: UPS1 Information
+    options:
+     - "Visible"
+     - "Hide"
+    initial: "Hide"
+  details2:
+    name: UPS2 Details
+    options:
+     - "Visible"
+     - "Hide"
+    initial: "Hide"
+  details1:
+    name: UPS1 Details
+    options:
+     - "Visible"
+     - "Hide"
+    initial: "Hide"
   beeper_options:
     name: Beeper Options
     options:
@@ -46,42 +76,6 @@ input_select:
      - "Beeper mute"
      - "Beeper disable"
     initial: "Beeper enable"
-    icon: mdi:volume-high
-  options2:
-    name: UPS2 Options
-    options:
-     - "Visable"
-     - "Hide"
-    initial: "Hide"
-    icon: mdi:settings-box
-  info_options2:
-    name: UPS2 Information
-    options:
-     - "Visable"
-     - "Hide"
-    initial: "Hide"
-    icon: mdi:information
-  info_options1:
-    name: UPS1 Information
-    options:
-     - "Visable"
-     - "Hide"
-    initial: "Hide"
-    icon: mdi:information
-  details2:
-    name: UPS2 Details
-    options:
-     - "Visable"
-     - "Hide"
-    initial: "Hide"
-    icon: mdi:magnify-plus-outline
-  details1:
-    name: UPS1 Details
-    options:
-     - "Visable"
-     - "Hide"
-    initial: "Hide"
-    icon: mdi:magnify-plus-outline
   test_options:
     name: Test Options
     options:
@@ -91,7 +85,6 @@ input_select:
      - "Deep battery test"
      - "Start panel test"
     initial: "Stop battery test"
-    icon: mdi:play
   power_options:
     name: Power Options
     options:
@@ -100,12 +93,11 @@ input_select:
 #     - "Shutdown remain off"
      - "Stop shutdown"
     initial: "Stop shutdown"
-    icon: mdi:power
-#######################
 #######################
 ###### Weblinks #######
 weblink:
   entities:
     - name: Router
-      url: http://192.168.i.p  # edit your router
+      url: !secret router_ip
 #######################
+

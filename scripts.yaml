@@ -1,4 +1,4 @@
-###### Scripts UPS #########
+###### Scripts #########
   beeper_enable:
     alias: "shell_command.beeper_enable"
     sequence:
@@ -40,14 +40,14 @@
     sequence:
       - service: shell_command.load_off
   shutdown_stayoff:
-    alias: "shell_command.initiate_shutdown_stayoff"
+    alias: "shell_command.initiate_shutdown_stayoffp"
     sequence:
       - service: shell_command.initiate_shutdown_stayoff
   shutdown_stop:
     alias: "shell_command.shutdown_stop"
     sequence:
       - service: shell_command.shutdown_stop
-#######################################
+#####################
   group_visdet1:
     sequence:
       - service: group.set_visibility
@@ -60,22 +60,23 @@
         data_template:
           entity_id: '{{ entity_id }}'
           visible: '{{ is_state(cond, visible_state) }}'
-  group_visibility1:
+  group_visinfo1:
     sequence:
       - service: group.set_visibility
         data_template:
           entity_id: '{{ entity_id }}'
           visible: '{{ is_state(cond, visible_state) }}'
-  group_visibility2:
+  group_visinfo2:
     sequence:
       - service: group.set_visibility
         data_template:
           entity_id: '{{ entity_id }}'
           visible: '{{ is_state(cond, visible_state) }}'
-  group_visibilityopt2:
+  group_visopt2:
     sequence:
       - service: group.set_visibility
         data_template:
           entity_id: '{{ entity_id }}'
           visible: '{{ is_state(cond, visible_state) }}'
-####################################
+#####################
+
