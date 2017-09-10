@@ -4,6 +4,8 @@ default_view:
   entities:
   - group.Time
   - group.Weather
+  - group.details1
+  - group.details2
 ######## Outdoors #########
 Garden:
   name: Garden
